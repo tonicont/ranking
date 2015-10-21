@@ -1,0 +1,4 @@
+services:
+#    tonicont_ranking.example:
+#        class: Tonicont\RankingBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

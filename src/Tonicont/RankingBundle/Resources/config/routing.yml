@@ -1,0 +1,3 @@
+tonicont_ranking_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: TonicontRankingBundle:Default:index }
