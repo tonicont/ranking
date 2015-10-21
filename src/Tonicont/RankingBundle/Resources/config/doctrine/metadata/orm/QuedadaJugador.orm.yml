@@ -1,0 +1,27 @@
+QuedadaJugador:
+    type: entity
+    table: quedada_jugador
+    indexes:
+        fk_qj_jugador:
+            columns:
+                - jugador
+    id:
+        quedada:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+        jugador:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+    fields:
+        ganados:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

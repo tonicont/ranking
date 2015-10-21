@@ -1,3 +1,7 @@
 tonicont_ranking_homepage:
     path:     /hello/{name}
     defaults: { _controller: TonicontRankingBundle:Default:index }
+
+tonicont_ranking_createPlayer:
+    path:     /crearJugador
+    defaults: { _controller: TonicontRankingBundle:Default:createJugador }
