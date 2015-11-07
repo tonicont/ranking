@@ -1,0 +1,62 @@
+.form-container{
+    width: 50%;
+    margin: auto;
+}
+
+.form-container div{
+    margin-bottom: 10px;
+}
+
+.textarea{
+    width: 400px;
+    height: 50px;
+}
+
+.name-input{
+    width: 200px;
+    padding: 10px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+}
+
+.name-input-label{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.save-button{
+    width:150px;
+    height:40px;
+    margin-left: 20px;
+    color:#fff;
+    font-size: 14px;
+    font-weight: bold;
+    background-color:green;
+    border:1px double #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.error-layer {
+
+}
+
+.error-layer ul{
+
+}
+
+.error-layer ul li{
+    list-style: none;
+    color: red;
+    font-weight: bold;
+}
+
+.quedadas-form{
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}

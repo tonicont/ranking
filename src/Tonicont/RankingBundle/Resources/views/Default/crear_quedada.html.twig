@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Crear Quedada</h1>
+
+    <div class="form-container">
+        {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            <div>
+                {{ form_label(form.fecha, null) }}
+                {{ form_widget(form.fecha) }}
+            </div>
+            <div>
+                {{ form_label(form.hora, null) }}
+                {{ form_widget(form.hora) }}
+            </div>
+            <div>
+                {{ form_label(form.description, null) }}
+                <br>
+                {{ form_widget(form.description, { 'attr': {'class': 'textarea'} }) }}
+            </div>
+
+            {{ form_widget(form.Guardar, { 'attr': {'class': 'save-button'} }) }}
+            <div class="error-layer">
+
+            </div>
+
+            {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

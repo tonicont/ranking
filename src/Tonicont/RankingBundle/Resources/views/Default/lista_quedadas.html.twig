@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Listado de Quedadas</h1>
+
+    <div>
+        <a href="{{ url('tonicont_ranking_crearQuedada') }}">Crear Quedadar</a>
+    </div>
+
+    <table>
+        {% for item in quedadas %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.fecha|date('d-m-Y') }}</td>
+                <td>{{ item.hora|date('H:i') }}</td>
+                <td>{{ item.description }}</td>
+                <td><a href="{{ url('tonicont_ranking_quedada', {'id' : item.id}) }}">Ver</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

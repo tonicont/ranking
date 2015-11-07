@@ -1,0 +1,4 @@
+TonicontRankingBundle\Entity\Jugador:
+    properties:
+        nombre:
+            - NotBlank: ~

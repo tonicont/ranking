@@ -3,6 +3,7 @@
 namespace Tonicont\RankingBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Jugador
@@ -25,6 +26,7 @@ class Jugador
      * @var string
      *
      * @ORM\Column(name="nombre", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Debe introducir un nombre.")
      */
     private $nombre;
 

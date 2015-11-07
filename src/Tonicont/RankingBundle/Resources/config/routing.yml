@@ -2,6 +2,26 @@ tonicont_ranking_homepage:
     path:     /hello/{name}
     defaults: { _controller: TonicontRankingBundle:Default:index }
 
-tonicont_ranking_createPlayer:
-    path:     /crearJugador
+tonicont_ranking_crearJugador:
+    path:     /crearjugador
     defaults: { _controller: TonicontRankingBundle:Default:createJugador }
+
+tonicont_ranking_listaJugadores:
+    path:       /jugadores
+    defaults:   { _controller: TonicontRankingBundle:Default:listarJugadores }
+
+tonicont_ranking_crearQuedada:
+    path:       /crearquedada
+    defaults:   { _controller: TonicontRankingBundle:Default:crearQuedada }
+
+tonicont_ranking_listaQuedadas:
+    path:       /quedadas
+    defaults:   { _controller: TonicontRankingBundle:Default:listarQuedadas }
+
+tonicont_ranking_quedada:
+    path:       /quedada/{id}
+    defaults:   { _controller: TonicontRankingBundle:Default:editarQuedada }
+
+tonicont_ranking_inscribirJugadores:
+    path:       /inscribirJugadores/{id}
+    defaults:   { _controller: TonicontRankingBundle:Default:inscribirJugadoresQuedada }

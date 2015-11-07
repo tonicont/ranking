@@ -2,12 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Ranking Puro Vicio!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/tonicontranking/css/main.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="{{ url('tonicont_ranking_listaJugadores') }}">Jugadores</a></li>
+                <li><a href="{{ url('tonicont_ranking_listaQuedadas') }}">Quedadas</a></li>
+            </ul>
+        </nav>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('js/main.js') }}" type="text/javascript"></script>
+        {% endblock %}
     </body>
 </html>

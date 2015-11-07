@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Quedada {{ id }}</h1>
+
+    <section class="inscritos-section">
+        <div class="title-section">Jugadores inscritos</div>
+        <table>
+            <tr>
+                <th>Nombre</th>
+            </tr>
+            {% for jugador in inscritos %}
+                <tr>
+                    <td>{{ jugador.nombre }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+    <section>
+        <div class="title-section">Modificar Inscripción de Jugadores</div>
+        <form action="{{ url('tonicont_ranking_inscribirJugadores', { 'id': id }) }}">
+            <table>
+                {% for jugador in jugadores %}
+                    <tr>
+                        <td>{{ jugador.nombre }}</td>
+                        <td>
+                            <input type="radio" value="S" name="{{ jugador.id }}">Inscribir
+                            <input type="radio" value="N" name="{{ jugador.id }}" checked>No Inscribir
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </section>
+
+{% endblock %}

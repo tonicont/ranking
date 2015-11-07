@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Listado de Jugadores</h1>
+
+    <div>
+        <a href="{{ url('tonicont_ranking_crearJugador') }}">Crear Jugador</a>
+    </div>
+
+    <table>
+        {% for item in jugadores %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.nombre }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

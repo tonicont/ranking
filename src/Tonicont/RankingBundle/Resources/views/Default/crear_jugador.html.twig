@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>Crear Jugador</h1>
+
+    <div class="form-container">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+            {{ form_label(form.nombre, null, {'label_attr': {'class': 'name-input-label'}}) }}
+            {{ form_widget(form.nombre, { 'attr': {'class': 'name-input'} }) }}
+            {{ form_widget(form.guardar, { 'attr': {'class': 'save-button'} }) }}
+            <div class="error-layer">
+                {{ form_errors(form.nombre) }}
+            </div>
+
+
+            {{ form_rest(form) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
